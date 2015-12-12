@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  var query="https://yts.to/api/v2/list_movies.json";
+  var query="https://yts.ag/api/v2/list_movies.json";
   var offset = 300,
 		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
 		offset_opacity = 1200,
@@ -70,7 +70,7 @@ $( document ).ready(function() {
   $("#axform").on('submit',function(e) {
     e.preventDefault();
     search=$(this).find("#exampleEmailInput").val();
-    query = "https://yts.to/api/v2/list_movies.json?limit=50&query_term="+search;
+    query = "https://yts.ag/api/v2/list_movies.json?limit=50&query_term="+search;
     $.ajax({
       dataType: "json",
       url:query,
